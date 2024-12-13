@@ -15,19 +15,27 @@
   flex-direction: column;
   font-size: 14px;
   margin: 0px 50px;
+  z-index: 1;
 }
 
 .ticket {
   display: flex;
   flex-direction: row;
   border-radius: 25px;
-  color: #4b4040;
-  margin: 0px 50px;
+  color: #ffe1a1;
+  margin: 0px 150px;
   padding: 20px;
   width: 100%;
-  height: 350px;
-  align-items: center;
+  height: 500px;
+  align-items: start;
   justify-content: space-between;
+  position: relative; /* Ensure the pseudo-element is positioned relative to this container */
+  background-color: rgba(255, 255, 255, 0.1); /* Optional: Add a semi-transparent background for contrast */
+  overflow: hidden;
+}
+
+.ticket h1 {
+  color: #ffca58;
 }
 
 .ticket::before {
@@ -36,17 +44,110 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 550px;
-  background-image: url('./precapture4.png');
+  height: 100%; /* Match the size of the parent container */
+  background-image: url('./precapture1.png');
   background-size: cover;
   background-position: center;
-  filter: blur(8px);
-  z-index: 0;
+  filter: blur(40px);
+  z-index: -1; /* Keep the pseudo-element behind the content */
 }
 
 .ticketSubDiv {
   display: flex;
   flex-direction: column;
-  width: 100%;
   z-index: 1;
+  padding: 0px 40px;
+  text-align: start;
+  align-self: flex-start;
+  justify-self: start;
+}
+
+.faroLogo {
+  width: 300px;
+  align-self: center;
+  margin-bottom: 5%;
+  padding: 20px 50px;
+}
+
+.ticketSubDiv > div:first-child {
+  display: flex;
+  gap: 5%;
+}
+
+.ticketCredits {
+  display: flex;
+  flex-direction: row;
+}
+.ticketCredits h2 {
+  display: flex;
+  align-self: center;
+  font-size: 1.5rem;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.ticketCredits p {
+  display: flex;
+  align-self: center;
+  padding: 5px;
+  padding-top: 12px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+
+.ticketSubLogo {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-bottom: 5%;
+  padding: 20px 50px;
+}
+
+.ticketLink {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffca5807;
+  width: 15%;
+  border-radius: 15px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  justify-self: center;
+  height: 80%;
+  margin-right: 80px;
+  box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.6);
+}
+
+.ticketLink a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #ffca58;
+  background-color: rgba(255, 187, 39, 0.362);
+  width: 80%;
+  height: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.ticketLink a:hover {
+  transform: translateY(-20px) scale(1.2);
+}
+
+.redTicketLogo{
+  width: 200px;
+}
+
+.ticketLogo {
+  width: 120px;
 }

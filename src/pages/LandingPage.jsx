@@ -8,7 +8,7 @@ function Landing() {
   const [count, setCount] = useState(0)
 
   return (
-    <div style={{ width: '100vw', overflowX: 'hidden' }}>
+    <div style={{ width: 'full', overflowX: 'hidden' }}>
       <Logo />
       <div style={{ height: '100vh', width: '100%', backgroundColor: 'transparent', position: 'relative', zIndex: "0" }}></div>
       <Video />
