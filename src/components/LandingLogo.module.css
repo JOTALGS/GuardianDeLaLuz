@@ -8,6 +8,10 @@
   background-color: #141625;
 }
 
+.logoContainer img {
+  width: 90%;
+}
+
 .logo {
     width: 90%;
     color: #edf100;
@@ -42,5 +46,8 @@
   .scrollButton {
     flex-direction: column;
   }
-
+  .logoContainer img {
+    width: 100%;
+  }
+  
 }

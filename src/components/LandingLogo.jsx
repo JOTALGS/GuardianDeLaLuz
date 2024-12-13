@@ -17,15 +17,19 @@ const Logo = () => {
     };
     window.addEventListener('resize', handleResize);
 
-    gsap.to(logoRef.current, {
-      width: "70%",
-      scrollTrigger: {
-        trigger: logoRef.current,
-        start: "top top",
-        end: "bottom top",
-        scrub: true,
-      },
-    });
+    gsap.fromTo(
+      logoRef.current,
+      { width: "90%" }, // Starting state
+      {
+        width: "60%", // Ending state
+        scrollTrigger: {
+          trigger: logoRef.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+        },
+      }
+    );
 
     return () => {
       window.removeEventListener('resize', handleResize);
@@ -75,12 +79,7 @@ const Logo = () => {
   return (
     <div className={styles.logoContainer}>
       <a href="#" target="_blank" rel="noopener noreferrer">
-        <img
-          ref={logoRef}
-          className={styles.logo}
-          src={faroLogo}
-          alt="Faro logo"
-        />
+        <img ref={logoRef} className={styles.logo} src={faroLogo} alt="Faro logo" />
       </a>
       <div className={styles.scrollButton}>
         <p>¡Desliza para saber más!</p>      
