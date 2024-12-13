@@ -1,0 +1,15 @@
+.videoContainer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    background-color: #141625;
+    padding-bottom: 150px;
+}
+
+.videoContainer video {
+    width: 40%;
+    border-radius: 15px;
+}

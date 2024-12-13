@@ -1,0 +1,46 @@
+.logoContainer{
+  width: 100%;
+  height: 90vh;
+  position: fixed;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #141625;
+}
+
+.logo {
+    width: 90%;
+    color: #edf100;
+}
+
+.scrollButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase; 
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.scrollButton p {
+  background: linear-gradient(90deg, #f1c500 0%, #ff7300 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 1000px) {
+  .logoContainer {
+    align-items: center;
+    justify-content: center;
+  }
+  .logo {
+    align-self: center;
+    justify-self: center;
+  }
+  .scrollButton {
+    flex-direction: column;
+  }
+
+}

@@ -1,0 +1,52 @@
+.ticketContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  background-color: #141625;
+  padding-bottom: 150px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  margin: 0px 50px;
+}
+
+.ticket {
+  display: flex;
+  flex-direction: row;
+  border-radius: 25px;
+  color: #4b4040;
+  margin: 0px 50px;
+  padding: 20px;
+  width: 100%;
+  height: 350px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ticket::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 550px;
+  background-image: url('./precapture4.png');
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  z-index: 0;
+}
+
+.ticketSubDiv {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: 1;
+}

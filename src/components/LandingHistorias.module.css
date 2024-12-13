@@ -1,0 +1,139 @@
+.storiesContainer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    background-color: #141625;
+    padding-bottom: 150px;
+}
+
+.stories {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    background-color: #57a9d81f;
+    color: #d18e5e;
+    z-index: 1;
+    padding: 40px 50px;
+    padding-bottom: 80px;
+    margin: 0px 150px;
+    border-radius: 50px;
+    box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.6);
+}
+
+.stories h1 {
+    color: #a14502;
+    padding: 0;
+    margin: 0;
+    margin-left: 40px;
+    font-size: 3.75rem;
+}
+
+.stories h1 span {
+    background: linear-gradient(90deg, #f1c500 0%, #ff7300 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.stories h2 {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 50px;
+    margin-left: 65px;
+    font-size: 2rem;
+}
+
+.storyItem {
+    width: 100%;
+    font-size: 2.25rem;
+    display: flex;
+    height: 800px;
+}
+
+.storyItem p {
+  width: 50%;
+  padding: 0px 50px;
+  box-sizing: border-box; /* Ensures padding doesn't increase the total width */
+  align-items: start;
+  color: #ffffff;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #f8ed85;
+}
+
+.storyItem img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 1650px) {
+  .stories {
+    margin: 0px 50px;
+  }
+  .storyItem {
+    height: 900px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .storyItem {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 1300px) {
+  .storyItem {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .storyItem p {
+    width: 100%;
+  }
+
+  .storyItem img {
+    width: 100%;
+    height: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .stories {
+    width: 100%;
+    padding: 30px 0px;
+    border-radius: 25px;
+    margin: 0px 30px;
+  }
+  .stories h1 {
+    font-size: 2.5rem;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .stories h2 {
+    font-size: 1.1rem;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 0px;
+  }
+  .storyItem {
+    font-size: 1.25rem;
+  }
+  .storyItem p {
+    padding: 0px 10px;
+  }
+  .storyItem img {
+    width: 95%;
+    height: 50%;
+    justify-self: center;
+    align-self: center;
+  }
+}

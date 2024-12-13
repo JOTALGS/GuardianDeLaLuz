@@ -1,0 +1,13 @@
+body {
+  background-color: #141625;
+}
+
+html {
+  background-color: #141625;
+}
+
+#root {
+  text-align: center;
+  background-color: #141625;
+  overflow-x: hidden;
+}
