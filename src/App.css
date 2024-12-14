@@ -11,3 +11,24 @@ html {
   background-color: #141625;
   overflow-x: hidden;
 }
+
+@font-face {
+  font-family: 'Chelsea';
+  src: url('/Chelsea.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ChelseaAlternates';
+  src: url('/ChelseaAlternates.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SmarttFrocksNF';
+  src: url('/SmarttFrocksNF.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

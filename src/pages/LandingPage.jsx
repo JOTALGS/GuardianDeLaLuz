@@ -10,7 +10,7 @@ function Landing() {
   return (
     <div style={{ width: 'full', overflowX: 'hidden' }}>
       <Logo />
-      <div style={{ height: '100vh', width: '100%', backgroundColor: 'transparent', position: 'relative', zIndex: "0" }}></div>
+      {/* <div style={{ height: '100vh', width: '100%', backgroundColor: 'transparent', position: 'relative', zIndex: "0" }}></div> */}
       <Video />
       <Historias />
       <Ticket />

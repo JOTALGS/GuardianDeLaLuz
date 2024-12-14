@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './LandingLogo.module.css';
-import faroLogo from '/logoFaroNegativo.png';
+import faroLogo from '/logoFaro.png';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -9,6 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Logo = () => {
   const logoRef = useRef(null);
+  const bgRef = useRef(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
@@ -18,10 +19,27 @@ const Logo = () => {
     window.addEventListener('resize', handleResize);
 
     gsap.fromTo(
-      logoRef.current,
-      { width: "90%" }, // Starting state
+      bgRef.current,
+      { height: "80%", y: 0, scale: 1,},
       {
-        width: "60%", // Ending state
+        height: "10%",
+        y: -1000,
+        scale: 0.5,
+        scrollTrigger: {
+          trigger: logoRef.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+        },
+      }   
+    )
+
+    gsap.fromTo(
+      logoRef.current,
+      { width: "90%", y: 0, },
+      {
+        width: "40%",
+        y: 500,
         scrollTrigger: {
           trigger: logoRef.current,
           start: "top top",
@@ -78,13 +96,26 @@ const Logo = () => {
 
   return (
     <div className={styles.logoContainer}>
-      <a href="#" target="_blank" rel="noopener noreferrer">
-        <img ref={logoRef} className={styles.logo} src={faroLogo} alt="Faro logo" />
-      </a>
-      <div className={styles.scrollButton}>
-        <p>¡Desliza para saber más!</p>      
-        {isMobile ? <MobileSVG /> : <DesktopSVG />}
+      <div ref={bgRef} className={styles.topContainer}>
+        <div className={styles.infoLeft}>
+          <p>Punto de reunión:</p>
+          <p>Pista de patinaje de punta brava</p>
+        </div>
+        <div className={styles.infoRight}>
+          <h2>Presentación</h2>
+          <p>18 de diciembre</p>
+          <p>19:00 horas</p>
+        </div>
       </div>
+      <div className={styles.bottomContainer}>
+        <img ref={logoRef} className={styles.logo} src={faroLogo} alt="Faro logo" />
+      </div>
+      {/*
+        <div className={styles.scrollButton}>
+          <p>¡Desliza para saber más!</p>      
+          {isMobile ? <MobileSVG /> : <DesktopSVG />}
+        </div>
+      */}
     </div>
   );
 };

@@ -25,6 +25,7 @@
 }
 
 .stories h1 {
+    font-family: 'SmartFrocksNS';
     color: #a14502;
     padding: 0;
     margin: 0;
@@ -41,11 +42,12 @@
 }
 
 .stories h2 {
+    font-family: 'Chelsea';
     padding: 0;
     margin: 0;
     margin-bottom: 50px;
     margin-left: 65px;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .storyItem {
