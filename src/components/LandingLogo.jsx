@@ -29,7 +29,7 @@ const Logo = () => {
           trigger: logoRef.current,
           start: "top top",
           end: "bottom top",
-          scrub: true,
+          scrub: 3,
         },
       }   
     )
