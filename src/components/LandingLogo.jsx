@@ -20,7 +20,7 @@ const Logo = () => {
 
     gsap.fromTo(
       bgRef.current,
-      { height: "80%", y: 0, scale: 1,},
+      { height: "80%", y: 0, scale: 1, },
       {
         height: "10%",
         y: -1000,
@@ -36,7 +36,7 @@ const Logo = () => {
 
     gsap.fromTo(
       logoRef.current,
-      { width: "90%", y: 0, },
+      { width: "95%", y: 0, },
       {
         width: "40%",
         y: 500,

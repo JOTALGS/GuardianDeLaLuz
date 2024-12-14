@@ -36,7 +36,7 @@
 }
 
 .infoLeft {
-  font-family: sans-serif;
+  font-family: 'SmartFrocksNF';
   align-items: end;
   justify-content: end;
   text-align: start;
@@ -47,7 +47,7 @@
 }
 
 .infoRight {
-  font-family: sans-serif;
+  font-family: 'SmartFrocksNF';
   align-items: end;
   justify-content: end;
   text-align: start;
@@ -92,11 +92,33 @@
 @media (max-width: 1000px) {
   .logoContainer {
     align-items: center;
-    justify-content: center;
+    justify-content: start;
+  }
+  .topContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+  }
+  .infoLeft {
+    transform: translateX(0px);
+    font-size: 1.5rem;
+    line-height: 25px;
+    padding: 10px 20px;
+    text-align: center;
+  }
+  .infoRight {
+    transform: translateX(0px) translateY(-80px);
+    font-size: 1.5rem;
+    line-height: 25px;
+    padding: 10px 20px;
+    text-align: center;
   }
   .logo {
     align-self: center;
     justify-self: center;
+  }
+  .bottomContainer {
+    width: 100%;
   }
   .scrollButton {
     flex-direction: column;
